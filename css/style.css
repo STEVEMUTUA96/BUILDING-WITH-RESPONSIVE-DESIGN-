@@ -437,6 +437,20 @@ body{
 
 }
 
+
+.floating-box{
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    margin: 10px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+    z-index: 2;
+    position: absolute;
+}
+
 .expand-cart{    
     display: flex;
     flex-direction: column;
@@ -539,6 +553,8 @@ body{
     margin: 15px;
 }
 
+
+
 /* apps-section */
  .app-section{
     display: flex;
@@ -582,8 +598,7 @@ body{
     grid-template-rows: repeat(1, 1fr);
     margin: 10px 10px 10px 10px;
     gap: 10px; 
-    line-height: 0.9; 
-    border: 1px solid black;    
+    line-height: 0.9;        
 }
 
 .app-area{
@@ -591,8 +606,8 @@ body{
     flex-direction: column;
     position: relative;
     height: 600px;     
-    background-image: linear-gradient(to bottom,rgb(247, 243, 239),rgb(245, 238, 238));  
-    border: 1px solid black; 
+    background-image: linear-gradient(to bottom,rgb(247, 243, 239),rgb(247, 242, 242)); 
+   
 }
 
 .app-img{
@@ -649,17 +664,261 @@ body{
     margin-bottom: 10px;
 }
 
-.app-latest{
-    display: block;     
+.app-latest{    
+    display: flex;      
+    flex-direction: row;
+    background-color: rgb(241, 223, 223);
     width: 100%;
     height: 100px;
-    margin: 0px;
-    border: 1px solid red;
-    background-size: cover;
-    background-repeat: no-repeat;     
-  
+    margin: 0px;       
 }
 
+
+
+.section-latest{  
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.section-latest p{
+    font-size: 13px;
+    font-weight: 450;
+    color: rgb(238, 80, 32);
+ }
+
+ .section-latest h4{
+     margin-top: 6px;
+     color: tomato;
+     cursor: pointer;
+ }
+
+ .section-latest h4:hover{
+    text-decoration: underline 0.7px solid rgb(241, 162, 148);   
+ }
+
+
+.latest-img{
+    width: 30%;    
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2px;
+}
+
+
+.latest-list{    
+    height: auto;
+    margin-top:6px;
+    color: rgb(90, 85, 85); 
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.latest-list ul{
+    list-style: none;
+}
+
+.latest-list ul li{      
+    margin-left: 13px;
+    padding-top:7px;
+    padding-bottom:7px;
+    border-bottom: 1px solid rgb(226, 220, 220);
+    cursor: pointer;
+}
+
+.latest-list ul li:hover{
+    color: #000;
+}
+
+
+.latest-list ul li::before{
+    content: "•";
+    color: red;
+    display: inline-block;
+    width: 1em; 
+    margin-left: -13px;   
+       
+}
+
+
+/* latest deals */
+
+.latest-news{ 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    width: 1150px;
+    height: auto;   
+    
+}
+
+.latest-news-h5 h3{
+    font-size: 27px;
+    font-weight: 800;
+    color: rgb(231, 25, 25);
+    margin-top: 50px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.latest-news-h5 h3:hover{
+    color: #000;
+}
+
+.news-bottom{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 20px 10px 10px 10px;
+    gap: 10px; 
+    line-height: 0.9; 
+           
+}
+
+
+.news-bottom h2 a{
+    color: rgb(36, 33, 33);
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+   
+}
+
+.news-contents h2 a:hover{
+    color: tomato;
+    text-decoration: underline 1px solid tomato;
+}
+
+.news-bottom a{
+    color:rgb(121, 113, 113);
+    
+}  
+
+.news-bottom ul{
+    margin-top: 12px;
+    padding: 10px 10px 0px 5x;
+}
+
+.news-contents{ 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 230px;
+    
+
+} 
+
+.news-img{
+    width: 100%;
+    height: 150px;       
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.news-list ul{
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+    color:rgb(197, 191, 191);
+    list-style: none;   
+}
+
+
+.news-list ul li{
+    margin-right: 10px;
+    color:rgb(197, 191, 191);
+}
+
+
+
+
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:300px;
+    margin-top: 130px;
+    background-color: black;
+}
+
+.footer-section{   
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    height: 60%;
+    color: white;
+    text-transform: uppercase;    
+}
+.logo-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo-ul ul{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.logo-ul ul li{
+    padding: 7px;
+    list-style: none;
+}
+.logo-ul ul li i{
+    padding: 10px;
+    background-color: rgb(56, 52, 52);
+    border-radius: 50%;
+}
+
+
+.footer-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-ul ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-ul ul li{
+    list-style: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(160, 153, 153);
+}
+
+
+.footer p{
+    margin-top: 17px;
+    color: white;
+    font-size: 13px;
+    color: rgb(187, 177, 177);
+}
+
+.lower-section-footer{
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.footer span{
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+}
 
 
 
@@ -682,7 +941,7 @@ body{
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
- 
+  
 
 .nav-overlay{
     display: flex;
@@ -745,7 +1004,8 @@ body{
     display: flex;
     position: absolute;
     bottom: 10px;  
-    text-align: center;    
+    text-align: center;  
+    margin-left: 450px;  
 }
 
 
